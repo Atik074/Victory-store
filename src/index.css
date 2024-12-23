@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body{
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+} */
 @layer base {
   .text-shadow {
     text-shadow: -6px 6px 10px rgba(0,0,0,0.4)

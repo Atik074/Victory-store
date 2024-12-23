@@ -3,6 +3,8 @@ import { Link } from "react-router";
 import AirplanSvg from "../../components/svg/AirplanSvg";
 import BarSvg from "../../components/svg/BarSvg";
 import DownSvg from "../../components/svg/DownSvg";
+import { useState } from "react";
+import CategoryPanel from "../categoryPanel/CategoryPanel";
 
 export const headerMenu = [
   {
@@ -33,16 +35,26 @@ export const headerMenu = [
 ];
 
 const SubHeader = () => {
+  const [isOpenDrawer , setIsOpenDrawer] = useState(false)
+
+  const handleCategoryPanel =()=>{
+    setIsOpenDrawer(true)
+  };
+
+
   return (
-    
+       <>
+       
       <div className="container flex justify-between  text-xl bg-white  py-4 px-2">
         <div className="flex space-x-8">
-          <Link className="flex items-center">
+          <button
+           onClick={handleCategoryPanel}
+           className="flex items-center">
             <BarSvg />
             <span className="mr-6 ml-2">Shop By Category</span>
             <DownSvg />
             <div className="border-r-2 border-[#9aa3b9] h-[22px] ml-3"></div>
-          </Link>
+          </button>
 
           {headerMenu.map((item) => (
             <li
@@ -59,6 +71,11 @@ const SubHeader = () => {
           <h2>Free International Delivery</h2>
         </div>
       </div>
+          <CategoryPanel 
+          isOpenDrawer={isOpenDrawer}
+          setIsOpenDrawer={setIsOpenDrawer}
+          />
+      </>
   
   );
 };
