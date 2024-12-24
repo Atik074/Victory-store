@@ -7,7 +7,7 @@ import Home from "./pages/home/Home"
 function App() {
 
   return (
-    <div className="font-meriandaFont">
+    <div className="font-Lora">
    <Routes>
         <Route element={<Home/>} path="/"></Route>
        

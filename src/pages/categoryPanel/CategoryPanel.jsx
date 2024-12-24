@@ -14,10 +14,13 @@ const CategoryPanel =({isOpenDrawer,setIsOpenDrawer})=> {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 300 }} role="presentation" onClick={handleToggleDrawer(false)}>
+    <Box sx={{ width: 300 }} role="presentation">
         <div className='flex items-center space-x-10'>
            <h3 className='font-medium text-xl m-4'>Shop By Categories</h3>
-           <Xmark/>
+           <button onClick={handleToggleDrawer(false)}>
+              <Xmark/>
+           </button>
+          
         </div>
         <hr/>
         <CategoryPanelList/>
@@ -26,12 +29,10 @@ const CategoryPanel =({isOpenDrawer,setIsOpenDrawer})=> {
   );
 
   return (
-    <div>
-     
-      <Drawer open={isOpenDrawer} onClose={handleToggleDrawer(false)}>
-        {DrawerList}
-      </Drawer>
-    </div>
+    <Drawer   open={isOpenDrawer}>
+    {DrawerList}
+  </Drawer>
+  
   );
 }
 

@@ -22,7 +22,7 @@ export default {
       colors:{},
       fontFamily:{
         sans:["Poppins" ,"sans-serif"],
-        meriandaFont:["Merienda" , "cursive"]
+        Lora: ["Lora", "serif"]
       },
       container:{
         center:true ,
