@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import AirplanSvg from "../../components/svg/AirplanSvg";
 import BarSvg from "../../components/svg/BarSvg";
 import DownSvg from "../../components/svg/DownSvg";
-import { useState } from "react";
 import CategoryPanel from "../categoryPanel/CategoryPanel";
+import FashionMenuList from "./dropDownMenu/FashionMenuList";
 import "./style.css";
-import DropDownMenuList from "./dropDownMenu/DropDownMenuList";
+import AllBrandMenulist from "./dropDownMenu/AllBrandMenulist";
+import MoreMenuList from "./dropDownMenu/MoreMenuList";
 
 const SubHeader = () => {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -39,19 +41,21 @@ const SubHeader = () => {
               >
                 Fashion
               </Link>
-              <DropDownMenuList />
+              <FashionMenuList />
               <Link
                 to="/new-arrivals"
                 className="hover:text-red-500 transition"
               >
                 New Arrivals
               </Link>
-              <Link to="/all-brands" className="hover:text-red-500 transition">
+              <Link id="allBrandMenu" to="/all-brands" className="hover:text-red-500 transition">
                 All Brands
               </Link>
-              <Link to="/more" className="hover:text-red-500 transition">
+              <AllBrandMenulist/>
+              <Link id="moreMenu" to="/more" className="hover:text-red-500 transition">
                 More
               </Link>
+              <MoreMenuList/>
             </ul>
           </div>
         </div>

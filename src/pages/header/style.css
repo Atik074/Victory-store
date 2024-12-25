@@ -2,8 +2,32 @@
 #dropDownMenu ul a:hover{
   color: rgb(239 68 68);
 }
- #fashionMenu:hover + #dropDownMenu  ,#dropDownMenu:hover{
-    opacity: 1;
-    visibility: inherit;
- 
+
+
+#dropDownMenu{
+  transform: translateY(30px);
+  transition:transform .7s;
 }
+
+ #fashionMenu:hover + #dropDownMenu ,#dropDownMenu:hover{
+    visibility: inherit;
+    opacity:1;
+    transform: translateY(0px);
+   
+}
+
+ #allBrandMenu:hover + #dropDownMenu ,#dropDownMenu:hover{
+    visibility: inherit;
+    opacity:1;
+    transform: translateY(0px);
+   
+}
+ #moreMenu:hover + #dropDownMenu ,#dropDownMenu:hover{
+    visibility: inherit;
+    opacity:1;
+    transform: translateY(0px);
+   
+}
+
+
+

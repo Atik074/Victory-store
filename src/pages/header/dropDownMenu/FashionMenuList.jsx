@@ -1,12 +1,12 @@
 import { Link } from "react-router";
 
-const DropDownMenuList = () => {
+const FashionMenuList = () => {
   return (
     <div
       id="dropDownMenu"
       className="absolute 
         bg-white border   left-[354px] top-[59px] 
-         shadow-md grid grid-cols-3   rounded h-[370px] w-[55%] opacity-0"
+         shadow-md grid grid-cols-3   rounded h-[370px] w-[53%] opacity-0"
     >
       <ul className=" flex flex-col p-2 text-[18px] mx-3 space-y-1 my-2 ">
         <Link to="/" className="font-semibold mb-2">
@@ -38,10 +38,14 @@ const DropDownMenuList = () => {
         <Link to="">Sunglasses </Link>
       </ul>
       <div className="pb-2 ml-5  absolute bottom-3 ">
-           <img className="h-[129px]" src="https://shorturl.at/IqHYT" alt="image"/>
+        <img
+          className="h-[132px]"
+          src="https://shorturl.at/IqHYT"
+          alt="image"
+        />
       </div>
     </div>
   );
 };
 
-export default DropDownMenuList;
+export default FashionMenuList;
