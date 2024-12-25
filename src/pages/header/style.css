@@ -1,0 +1,9 @@
+
+#dropDownMenu ul a:hover{
+  color: rgb(239 68 68);
+}
+ #fashionMenu:hover + #dropDownMenu  ,#dropDownMenu:hover{
+    opacity: 1;
+    visibility: inherit;
+ 
+}
