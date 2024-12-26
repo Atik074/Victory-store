@@ -1,3 +1,4 @@
+import Banner from "../banner/Banner";
 import Header from "../Header/Header";
 import SubHeader from "../header/SubHeader";
 
@@ -9,6 +10,7 @@ const Home = () => {
                   <hr/>
               <SubHeader/>
             </div>
+            <Banner/>
           
             
         </div>

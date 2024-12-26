@@ -22,8 +22,9 @@ export default {
       },
       colors:{},
       fontFamily:{
-        sans:["Poppins" ,"sans-serif"],
-        Lora: ["Lora", "serif"]
+        Lora: ["Lora", "serif"],
+        sans:["Poppins" ,"sans-serif"]
+       
       },
       container:{
         center:true ,
