@@ -7,17 +7,7 @@
  overflow-x: hidden;
  
 } 
-@layer base {
-  .text-shadow {
-    text-shadow: -6px 6px 10px rgba(0,0,0,0.4)
-  }
-}
 
-@layer utilities{
-  .img-shadow{
-    filter:drop-shadow(-6px ,8px 15px rgba(0,0,0,0.4))
-  }
-}
 
 .swiper-button-prev, .swiper-button-next{
    width: 35px !important;
@@ -33,4 +23,8 @@
   font-size: 17px !important;
   color: #fff !important;
  
+}
+img:hover{
+  transform: scale(1.1);
+  transition:transform .5s ;
 }
