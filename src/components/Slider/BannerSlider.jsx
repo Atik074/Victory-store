@@ -1,15 +1,19 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Navigation,Autoplay } from 'swiper/modules';
 
 const BannerSlider = () => {
     return (
         <Swiper 
         navigation={true}
         spaceBetween={20}
-         modules={[Navigation]} className="container   w-full h-full">
-         <SwiperSlide className='flex items-center content-center bg-[#fff] text-[18px] text-center'>
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+         modules={[Navigation ,Autoplay]} className="container   w-full h-full">
+         <SwiperSlide  className='flex items-center content-center bg-[#fff] text-[18px] text-center'>
                 <div className='overflow-hidden'>
                 <img className='w-full  h-[430px] rounded-md block object-cover' src="https://shorturl.at/gZOaC" alt="" />
                 </div>
