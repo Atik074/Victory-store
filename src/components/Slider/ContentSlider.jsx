@@ -56,15 +56,14 @@ const ContentSlider = () => {
      <Swiper
       slidesPerView={6}
       spaceBetween={2}
-      
       navigation={true}
       modules={[Navigation]}
-     
+       rewind={true}
       className="mySwiper container my-10"
     >
       {contentItems.map((item) => (
         <SwiperSlide ar key={item.id}>
-          <div className="card-body flex flex-col justify-center items-center bg-white w-[190px] h-[180px] border border-[#dcdde1] rounded-[8px] overflow-hidden">
+          <div className="flex flex-col justify-center items-center bg-white w-[190px] h-[180px] border border-[#dcdde1] rounded-[8px] overflow-hidden">
             <img className="rounded-md relative" src={`${item.img}`} alt="" />
             <h3 className="absolute text-[18px] bottom-4 font-medium">
               {item.title}

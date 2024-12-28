@@ -1,8 +1,11 @@
 .mySwiper img:hover{
     transform: scale(1.1);
     transition:transform .5s ;
+    cursor: pointer;
+   
+  
   }
-
+  
 
  .mySwiper  .swiper-button-prev ,.mySwiper .swiper-button-next{
     width: 32px !important;
@@ -12,7 +15,7 @@
     background-color: rgb(255, 247, 247) !important;
     box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
     opacity: 0;
- 
+   
     
  }
 
@@ -24,6 +27,8 @@
 .mySwiper .swiper-button-prev::after, .mySwiper .swiper-button-next::after{
    font-size: 14px !important;
    color: #0a0a0a !important;
+ 
+  
   
  }
 
@@ -39,3 +44,8 @@
     opacity: 1 !important;
 }
 
+ .swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  opacity: 1 !important;
+ 
+}

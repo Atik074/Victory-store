@@ -25,3 +25,21 @@
  
 }
 
+/* for scroll bar css */
+::-webkit-scrollbar{
+  width: 10px !important;
+  height: 5px  !important;
+}
+::-webkit-scrollbar-thumb{
+  background: #a4b0be;
+}
+::-webkit-scrollbar-track{
+  background: #ffffff;
+}
+
+
+.swiper-button-disabled {
+  opacity: 0.5; /* Optional: indicate a disabled state visually */
+  pointer-events: auto; /* Allow clicks on "disabled" buttons */
+  cursor: pointer; /* Show a clickable cursor */
+}
