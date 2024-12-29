@@ -24,25 +24,34 @@ const  Banner =()=> {
         <h2 className="text-3xl font-bold uppercase">- Only $200*</h2>
      </section>
 
-        <section  className="flex p-5">
-               <AdsBannerSlider 
-               title="S22 Samsung Smartphone"
-               img="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-1.jpg"
-               price="$250.00" 
-               buttonText="SHOP NOW"
-               />
+        <section  className="flex ">
+             
+             <div className="bg-[#4bcffa] rounded">
+             <AdsBannerSlider 
+            
+            title="S22 Samsung Smartphone"
+            img="http://surl.li/uhvriv"
+            price="$250.00" 
+            buttonText="SHOP NOW"
+            />
+             </div>
+             <div className="bg-[#ffc048] rounded">
                <AdsBannerSlider 
                title="Armchair Mad By shopstic"
-               img="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-2.jpg"
+               img="http://surl.li/bmnwwn"
                price="$190.00" 
                buttonText="SHOP NOW"
                />
+                 </div>
+                <div className="bg-[#575fcf] rounded">
                <AdsBannerSlider 
                title="Noise Wireless Headphones"
-               img="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/cms/cms-banner-3.jpg"
+               img="http://surl.li/wmqgnj"
                price="$129.00" 
                buttonText="SHOP NOW"
                />
+
+              </div>
         </section>
 
     </div>
