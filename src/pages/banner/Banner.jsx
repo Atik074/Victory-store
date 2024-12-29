@@ -5,6 +5,7 @@ import ContentSlider from "../../components/Slider/ContentSlider";
 
 
 
+
 const  Banner =()=> {
   return (
     <div>
@@ -24,18 +25,18 @@ const  Banner =()=> {
         <h2 className="text-3xl font-bold uppercase">- Only $200*</h2>
      </section>
 
-        <section  className="flex ">
+        <section  className="container grid grid-cols-3 gap-6 mb-12">
              
-             <div className="bg-[#4bcffa] rounded">
+             <div className="bg-[#4bc9f3] rounded">
              <AdsBannerSlider 
             
             title="S22 Samsung Smartphone"
-            img="http://surl.li/uhvriv"
+            img="https://rb.gy/3l3fuk"
             price="$250.00" 
             buttonText="SHOP NOW"
             />
              </div>
-             <div className="bg-[#ffc048] rounded">
+             <div className="bg-[#f0b343] rounded">
                <AdsBannerSlider 
                title="Armchair Mad By shopstic"
                img="http://surl.li/bmnwwn"
@@ -43,10 +44,10 @@ const  Banner =()=> {
                buttonText="SHOP NOW"
                />
                  </div>
-                <div className="bg-[#575fcf] rounded">
+                <div className="bg-[#f49e49] rounded">
                <AdsBannerSlider 
                title="Noise Wireless Headphones"
-               img="http://surl.li/wmqgnj"
+               img="https://shorturl.at/X8FFY"
                price="$129.00" 
                buttonText="SHOP NOW"
                />

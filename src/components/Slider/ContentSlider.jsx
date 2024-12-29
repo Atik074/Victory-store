@@ -50,12 +50,11 @@ const contentItems = [
 
 const ContentSlider = () => {
   
-
   return (
    <div >
      <Swiper
       slidesPerView={6}
-      spaceBetween={2}
+      spaceBetween={25}
       navigation={true}
       modules={[Navigation]}
        rewind={true}

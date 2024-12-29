@@ -20,10 +20,7 @@
  }
 
 
-.mySwiper .swiper-button-next{
-    margin-right: 22px;
- }
- 
+
 .mySwiper .swiper-button-prev::after, .mySwiper .swiper-button-next::after{
    font-size: 14px !important;
    color: #0a0a0a !important;

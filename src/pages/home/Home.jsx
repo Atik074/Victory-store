@@ -1,6 +1,7 @@
 import Banner from "../banner/Banner";
 import Header from "../Header/Header";
 import SubHeader from "../header/SubHeader";
+import Products from "../products/Products";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
               <SubHeader/>
             </div>
             <Banner/>
+            <Products/>
           
             
         </div>
