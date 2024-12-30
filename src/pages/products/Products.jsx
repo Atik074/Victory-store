@@ -3,17 +3,26 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
+import { useProducts } from '../../hooks';
+import ProductItem from './ProductItem';
 
 
 const  Products =()=> {
   const [value, setValue] = useState(0);
+  const {products} = useProducts()
+  console.log(products)
+  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+   
+ 
+
 
   return (
-    <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper' }}>
+    <div className='container'>
+        <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper' }}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -30,6 +39,18 @@ const  Products =()=> {
         <Tab label="Item Seven" />
       </Tabs>
     </Box>
+      <div className='grid grid-cols-3 gap-2'>
+          {
+            products.map(product =><ProductItem
+             key={product.id}
+             product={product}
+            />
+            )
+          }
+      </div>
+
+    </div>
+   
   );
 }
 
