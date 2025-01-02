@@ -7,28 +7,31 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 
+
 const ProductItem = ({product}) => {
+  const { title,  description, image } = product;
+
     return (
         <Card 
              
             sx={{ maxWidth: 345}}>
               <CardMedia
                 component="img"
-                alt="green iguana"
-                height="140"
-                image={`${product?.images}`}
+                sx={{ width:200}}
+                alt="images"
+                image={`${image}`}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                 {product.title}
+                 {title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                 {product.description}
+                {description.slice(0, 45) + "..."}
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Share</Button>
-                <Button size="small">Learn More</Button>
+               <Button size="md">Buy Now</Button>
+               <Button size="md">Add To Cart</Button>
               </CardActions>
             </Card>
     );

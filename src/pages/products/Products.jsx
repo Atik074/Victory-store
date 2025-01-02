@@ -39,7 +39,7 @@ const  Products =()=> {
         <Tab label="Item Seven" />
       </Tabs>
     </Box>
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid grid-cols-4 space-x-6 space-y-6'>
           {
             products.map(product =><ProductItem
              key={product.id}
