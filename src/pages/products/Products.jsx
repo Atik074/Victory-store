@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
 import { useProducts } from '../../hooks';
-import ProductItem from './ProductItem';
+
 
 
 const  Products =()=> {
@@ -21,8 +21,13 @@ const  Products =()=> {
 
 
   return (
-    <div className='container'>
-        <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper' }}>
+    <div className='container flex items-center justify-between'>
+      <div>
+             <h3 className='text-[26px] font-semibold'>Popular Products</h3>
+             <p className='text-[19px] text-[#57606f]'>Don&apos;t miss the current  offer untill the July</p>
+      </div>
+      <div>
+      <Box sx={{ maxWidth: { xs: 320, sm: 480, md:700 }, bgcolor: 'background.paper' }}>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -30,16 +35,19 @@ const  Products =()=> {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       >
-        <Tab label="Item One" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-        <Tab label="Item Four" />
-        <Tab label="Item Five" />
-        <Tab label="Item Six" />
-        <Tab label="Item Seven" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Fashions" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Electronics" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Bags" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Footwear" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Groceries" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Beauty" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Wellness" />
+        <Tab sx={{fontSize:15, fontWeight:600}} label="Jewellery" />
       </Tabs>
-    </Box>
-      <div className='grid grid-cols-4 space-x-6 space-y-6'>
+      </Box>
+      </div>
+       
+      {/* <div className='grid grid-cols-4 mt-6 gap-6'>
           {
             products.map(product =><ProductItem
              key={product.id}
@@ -47,7 +55,7 @@ const  Products =()=> {
             />
             )
           }
-      </div>
+      </div> */}
 
     </div>
    

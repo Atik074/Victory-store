@@ -12,28 +12,28 @@ const ProductItem = ({product}) => {
   const { title,  description, image } = product;
 
     return (
-        <Card 
-             
-            sx={{ maxWidth: 345}}>
-              <CardMedia
-                component="img"
-                sx={{ width:200}}
-                alt="images"
-                image={`${image}`}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                 {title}
-                </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {description.slice(0, 45) + "..."}
-                </Typography>
-              </CardContent>
-              <CardActions>
-               <Button size="md">Buy Now</Button>
-               <Button size="md">Add To Cart</Button>
-              </CardActions>
-            </Card>
+      <Card sx={{ maxWidth: 345, border:"1px  solid white",boxShadow:"rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0"}}>
+      <CardMedia
+        sx={{ height:200, padding:6,width:300 }}
+        
+        image={`${image}`}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+
     );
 };
 
