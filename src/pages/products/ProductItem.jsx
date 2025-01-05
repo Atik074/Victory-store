@@ -1,38 +1,29 @@
-/* eslint-disable react/prop-types */
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Rating } from "@mui/material";
+import { Link } from "react-router";
 
 
-
-const ProductItem = ({product}) => {
-  const { title,  description, image } = product;
+const ProductItem = () => {
+ 
 
     return (
-      <Card sx={{ maxWidth: 345, border:"1px  solid white",boxShadow:"rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0"}}>
-      <CardMedia
-        sx={{ height:200, padding:6,width:300 }}
-        
-        image={`${image}`}
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+      <div className="productItem border shadow-md  rounded-md overflow-hidden mb-12">
+         <div className="imgWrapper w-[100%] h-[280px] overflow-hidden">
+           <img className="w-full"  
+             src="https://api.spicezgold.com/download/file_1734529297930_fiorra-women-s-teapot-blue-pure-cotton-a-line-kurta-with-sharara-and-dupatta-product-images-rvo9n8udfg-1-202307260626.jpg" alt="" />
+         </div>
+         <div className="px-3 my-3">
+          <h3 className="hover:text-red-600 text-[#707171] text-[18px] mt-2">
+            <Link to="/"> Initech space</Link>
+            </h3>
+            <p className="hover:text-red-600 font-[500] text-[19px] leading-7 my-2"> 
+              <Link  to="/">Apple Smart Watch   Midnight Aluminum
+              </Link>
+              </p>
+          <Rating name="size-small" defaultValue={3} size="small" />
+              <p className="text-[18px] mt-1">$135</p>
+         </div>
+    
+      </div>
 
     );
 };
