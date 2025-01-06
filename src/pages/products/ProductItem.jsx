@@ -1,6 +1,8 @@
 import { Rating } from "@mui/material";
 import { Link } from "react-router";
 import HeartSvg from "../../components/svg/HeartSvg";
+import ZoomSvg from "../../components/svg/ZoomSvg";
+import "./Style.css"
 
 
 const ProductItem = () => {
@@ -16,17 +18,16 @@ const ProductItem = () => {
                 <span 
                 className="w-[40px] h-[20px] text-center rounded-sm bg-red-500  z-50 absolute top-[12px] left-[12px] text-white text-[13px] font-semibold">-12%</span>
                 <span 
-                className="w-[40px] h-[20px] text-center rounded-sm bg-green-600   absolute top-[37px] left-[12px] text-white text-[14px] font-[600] ">new</span>
+                className="newStatus w-[40px] h-[20px] text-center rounded-sm bg-green-600   absolute top-[37px] left-[12px] text-white text-[14px] font-[600] opacity-0  transition-all ">new</span>
              </div>
-             <div className=" ">
-                <button  className="flex items-center w-[40px] h-[40px] text-center rounded-full  border-[1px] border-[#dfe4ea]   absolute top-[37px] right-[12px] text-white ">
-                    <HeartSvg />
+             <div>
+             <button  className="heartSvg w-[40px] h-[40px]  rounded-[100%]    absolute top-[25px] right-[12px]  text-black bg-white hover:bg-red-700 hover:text-white 
+             opacity-0 transition-all ">
+                    <HeartSvg/>
                 </button>
-                <button  className="flex items-center w-[40px] h-[40px] text-center rounded-full  border-[1px] border-[#dfe4ea]   absolute top-[87px] right-[12px] text-white ">
-                    <HeartSvg />
-                </button>
-                <button  className="flex items-center w-[40px] h-[40px] text-center rounded-full  border-[1px] border-[#dfe4ea]   absolute top-[135px] right-[12px] text-white ">
-                    <HeartSvg />
+             
+                <button  className="zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute top-[75px] right-[12px] text-black bg-white  hover:bg-red-700 hover:text-white opacity-0 transition-all ">
+                    <ZoomSvg/>
                 </button>
              </div>
          </div>

@@ -16,7 +16,7 @@ const ProductSlider = () => {
            navigation={true}
            modules={[Navigation]}
             rewind={true}
-           className="mySwiper"
+           className="swiper-contents"
            >
        
         <SwiperSlide>  <ProductItem/> </SwiperSlide>
