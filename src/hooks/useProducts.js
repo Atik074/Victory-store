@@ -18,7 +18,7 @@ const useProducts =()=>{
                 message:"product data is fetchig..."
             })
 
-             const productsResponse =await  fetch("https://fakestoreapi.com/products") 
+             const productsResponse =await  fetch(`https://dummyjson.com/products`)
              const productsData =await productsResponse.json()
              setProducts(productsData)
             

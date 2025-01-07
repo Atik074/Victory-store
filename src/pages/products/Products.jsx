@@ -3,16 +3,14 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
-import { useProducts } from '../../hooks';
-import ProductSlider from '../../components/Slider/ProductSlider';
+ import ProductSlider from '../../components/Slider/ProductSlider';
 
 
 
 
 const  Products =()=> {
   const [value, setValue] = useState(0);
-  const {products} = useProducts()
-  console.log(products)
+
   
 
   const handleChange = (event, newValue) => {
@@ -54,9 +52,11 @@ const  Products =()=> {
     
     
       <div className='mt-4'>
-        <ProductSlider/>
+        <ProductSlider/> 
+      
            
       </div>
+    
 
     </div>
    
