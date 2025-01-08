@@ -6,7 +6,9 @@ import ZoomSvg from "../../components/svg/ZoomSvg";
 import "./Style.css"
 
 
-const ProductItem = ({product}) => {
+
+const ProductItem = ({product ,onHandleZoomProduct}) => {
+    
  
 
     return (
@@ -31,14 +33,18 @@ const ProductItem = ({product}) => {
               availabilityStatus}</span>
           </div>
           <div>
-          <button  className="heartSvg w-[40px] h-[40px]  rounded-[100%]    absolute top-[25px] right-[12px]  text-black 
+          <button  
+          
+          className="heartSvg w-[40px] h-[40px]  rounded-[100%]    absolute top-[25px] right-[12px]  text-black 
           bg-[#f1f2f6]
            hover:bg-red-700 hover:text-white 
           opacity-0 transition-all ">
                  <HeartSvg/>
              </button>
           
-             <button  className="zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute top-[75px] right-[12px] text-black bg-[#f1f2f6]  hover:bg-red-700 hover:text-white opacity-0 transition-all ">
+             <button  
+               onClick={() =>onHandleZoomProduct(product)}
+             className="zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute top-[75px] right-[12px] text-black bg-[#f1f2f6]  hover:bg-red-700 hover:text-white opacity-0 transition-all ">
                  <ZoomSvg/>
              </button>
           </div>
@@ -55,6 +61,7 @@ const ProductItem = ({product}) => {
            <p className="text-[18px] mt-1">$135</p>
       </div>
  
+     
    </div>
 
     );

@@ -20,7 +20,7 @@ const useProducts =()=>{
 
              const productsResponse =await  fetch(`https://dummyjson.com/products`)
              const productsData =await productsResponse.json()
-             setProducts(productsData)
+             setProducts(productsData.products)
             
 
         }catch(error){
