@@ -15,7 +15,7 @@ const ProductItem = ({product ,onHandleZoomProduct}) => {
       <div  className="shadow-md rounded-md border ">
   
       <div className="imgWrapper  w-[100%] h-[280px] overflow-hidden relative">
-       <Link tp="/">
+       <Link to="/">
        <div className="h-[280px]">
        <img className=" w-full h-[280px] transition-all duration-500 hover:scale-[1.1] hover:opacity-100"  
           src={product.thumbnail} alt="iamges" />
@@ -48,6 +48,7 @@ const ProductItem = ({product ,onHandleZoomProduct}) => {
                  <ZoomSvg/>
              </button>
           </div>
+
       </div>
       <div className="px-3 my-3">
        <h3 className="hover:text-red-600 transition-all text-[#707171] text-[18px] mt-2">
