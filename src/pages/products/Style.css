@@ -26,4 +26,11 @@
      
     
   }
+
+
+  .size.selected{
+    background-color: #6d4aae;
+    border: none;
+    color: white;
+  }
  
