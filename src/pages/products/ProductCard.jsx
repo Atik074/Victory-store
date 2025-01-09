@@ -41,10 +41,10 @@ const ProductCard = ({ product, onCloseModal }) => {
       <hr className="w-full border-[1px] " />
 
       <div className="mt-8 flex gap-12">
-        <div className="imgWrapper  w-[100%] h-[280px] overflow-hidden relative">
-          <div className="h-[280px] border-[2px] rounded-md ">
+        <div className="imgWrapper  w-[100%] h-[300px] overflow-hidden relative">
+          <div className="h-full border-[2px] rounded-md ">
             <img
-              className=" w-full h-[280px]  transition-all duration-500 hover:scale-[1.1] hover:opacity-100"
+              className=" w-full h-full  transition-all duration-500 hover:scale-[1.3] hover:opacity-100"
               src={product.thumbnail}
               alt="iamges"
             />
@@ -55,7 +55,7 @@ const ProductCard = ({ product, onCloseModal }) => {
               {discountPercentage}%
             </span>
           </div>
-          <div></div>
+         
         </div>
 
         <div className="textSide">

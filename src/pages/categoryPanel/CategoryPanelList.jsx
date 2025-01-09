@@ -28,7 +28,7 @@ const CategoryPanelList = () => {
     <div>
       <ul className="w-full">
         <li className="list-none flex items-center relative px-4 py-2">
-          <Link to='/'
+          <Link to=''
           onClick={()=>handleSubMenu(0)}
           className="w-full  text-[16px] text-left">Fashion
            
@@ -51,7 +51,7 @@ const CategoryPanelList = () => {
           showSubMenu === 0 && 
           <ul className="w-full absolute  top-[100%]  left-0 pl-9 my-2">
             <li className="list-none  relative">
-              <Link to="/" className="w-full  transition text-[16px] text-left ">
+              <Link to="" className="w-full  transition text-[16px] text-left ">
                 SubMneu
 
              {
@@ -74,18 +74,18 @@ const CategoryPanelList = () => {
                 showInnerSubMenu === 0 && 
                 <ul className="w-full absolute  top-[100%]  left-0 pl-2 my-2">
                 <li className="list-none  relative">
-                  <Link to="/" className="  text-[16px] text-left ">
+                  <Link to="" className="  text-[16px] text-left ">
                     children 1
                   </Link>
                 </li>
 
                 <li className="list-none  relative my-[1px]">
-                  <Link to="/" className="  text-[16px] text-left ">
+                  <Link to="" className="  text-[16px] text-left ">
                     children 2
                   </Link>
                 </li>
                 <li className="list-none  relative my-[1px]">
-                  <Link to="/" className="  text-[16px] text-left ">
+                  <Link to="" className="  text-[16px] text-left ">
                     children 3
                   </Link>
                 </li>
