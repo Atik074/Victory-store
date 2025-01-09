@@ -7,7 +7,7 @@ import "./Style.css"
 
 
 
-const ProductItem = ({product ,onHandleZoomProduct}) => {
+const ProductItem = ({product ,onOpenModal}) => {
     
  
 
@@ -43,7 +43,7 @@ const ProductItem = ({product ,onHandleZoomProduct}) => {
              </button>
           
              <button  
-               onClick={() =>onHandleZoomProduct(product)}
+               onClick={() =>onOpenModal(product)}
              className="zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute top-[75px] right-[12px] text-black bg-[#f1f2f6]  hover:bg-red-700 hover:text-white opacity-0 transition-all ">
                  <ZoomSvg/>
              </button>

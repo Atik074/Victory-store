@@ -1,6 +1,6 @@
 import Banner from "../banner/Banner";
 import Header from "../Header/Header";
-import SubHeader from "../header/SubHeader";
+import SubHeader from "../Header/SubHeader";
 import Products from "../products/Products";
 
 const Home = () => {

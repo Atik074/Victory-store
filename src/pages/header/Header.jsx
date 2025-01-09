@@ -1,4 +1,3 @@
-
 import { Link } from "react-router";
 import ShopSvg from "../../components/svg/ShopSvg";
 import ProfileSvg from "../../components/svg/ProfileSvg";
@@ -29,7 +28,10 @@ const Header = () => {
 
         <div className="flex gap-2 items-center relative ">
           <FavouriteSvg/>
-          <CartSvg/>
+          <span className="hover:text-red-600">
+              <CartSvg />
+          </span>
+        
           <ProfileSvg/>
          <div className="absolute bg-[#fc5c65] w-[18px] h-[19px] mx-auto bottom-[16px] left-[24px] text-center rounded-md text-sm text-white font-bold">0</div>
          <div className="absolute  bg-[#fc5c65] w-[18px] h-[19px] mx-auto bottom-[16px] left-[75px] text-center rounded-md text-sm text-white font-bold ">0</div>

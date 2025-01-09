@@ -17,14 +17,18 @@ const Products = () => {
   const [product , setProduct] = useState(null)
 
 
-console.log(product)
+  console.log(product)
 
-  //handle zoomProducts
-  const handleZoomProducts = (product) => {
-    setShowModal(!showModal);
+  //handle Modal Products
+  const handleOpenModal = (product) => {
+    setShowModal(true);
     setProduct(product)
     
   };
+  //handle close Modal Products
+  const handleCloseModal = ()=>setShowModal(false)
+   
+
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -66,7 +70,7 @@ console.log(product)
       </div>
 
       <Swiper
-        slidesPerView={5}
+        slidesPerView={4}
         spaceBetween={16}
         navigation={true}
         modules={[Navigation]}
@@ -78,7 +82,8 @@ console.log(product)
             <ProductItem
             key={product.id}
               product={product}
-              onHandleZoomProduct={handleZoomProducts}
+              onOpenModal={handleOpenModal}
+            
             />
           </SwiperSlide>
         ))}
@@ -89,7 +94,10 @@ console.log(product)
         showModal && 
         <div className="w-full px-6  top-0
         z-10 absolute">
-          <ProductCard product={product}/>
+          <ProductCard 
+            product={product}
+            onCloseModal ={handleCloseModal}
+          />
         </div>
        }
 
