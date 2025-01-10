@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 const ProductList = () => {
     return (
-        <section className="border-4 border-red-600">
+        <section >
             {/* kaj baki ase  */}
             <SubHeader/>
          

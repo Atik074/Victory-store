@@ -1,23 +1,18 @@
 
  .sidebar .scroll{
-  max-height: 180px ;
+  max-height: 170px ;
   overflow-y: scroll !important;
   overflow-x: hidden !important;
   
- 
 }
-
 
 .sidebar .scroll::-webkit-scrollbar{
     width: 10px !important;
     
-   
-    
-}
+  }
 .sidebar .scroll::-webkit-scrollbar-thumb{
    background-color:#a4b0be !important;
-   border-radius: 6px !important;
-   
+   border-radius: 6px !important;   
    
 }
 
@@ -27,12 +22,6 @@
  
 }
 
-
-
-/* ::-webkit-scrollbar{
-  width: 122px !important;
-  height: 55px  !important;
-} */
-/* ::-webkit-scrollbar-thumb{
-  background: #1b73d8;
-} */
+.range-slider .range-slider__thumb{
+  width: 15px !important; height: 15px !important;
+}
