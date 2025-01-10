@@ -1,13 +1,38 @@
 
-.sidebar .scroll{
-  max-height: 270px ;
+ .sidebar .scroll{
+  max-height: 180px ;
   overflow-y: scroll !important;
   overflow-x: hidden !important;
+  
  
 }
+
+
 .sidebar .scroll::-webkit-scrollbar{
-    width: 5px; height: 5px !important;
+    width: 10px !important;
+    
+   
+    
 }
 .sidebar .scroll::-webkit-scrollbar-thumb{
-   background-color: red !important;
+   background-color:#a4b0be !important;
+   border-radius: 6px !important;
+   
+   
 }
+
+.sidebar .scroll::-webkit-scrollbar-track{
+  background:#d1d8e0;
+  border-radius: 6px !important;
+ 
+}
+
+
+
+/* ::-webkit-scrollbar{
+  width: 122px !important;
+  height: 55px  !important;
+} */
+/* ::-webkit-scrollbar-thumb{
+  background: #1b73d8;
+} */
