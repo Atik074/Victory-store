@@ -16,7 +16,17 @@ const ProductCard = ({ product, onCloseModal }) => {
     price,
     availabilityStatus,
   } = product;
+ 
   const [selectedSize, setSelectedSize] = useState(null);
+  const [countProduct , setCountProduct] = useState(1)
+
+
+
+  
+  // handle  increase or decrease  product in cart
+  const handleIncreaseProduct =()=>setCountProduct(countProduct + 1)
+  const handleDecreaseProduct =()=>setCountProduct(countProduct - 1)
+ 
 
   // for product sizes
   const sizes = ["S", "M", "L"];
@@ -24,6 +34,8 @@ const ProductCard = ({ product, onCloseModal }) => {
   const handleSizeClick = (size) => {
     setSelectedSize(size);
   };
+
+
 
   return (
     <div className="w-3/4 h-[500px] transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
@@ -86,13 +98,20 @@ const ProductCard = ({ product, onCloseModal }) => {
 
             <div className="flex gap-x-10  my-6">
               <div className="flex gap-x-5    items-center   justify-between">
-              <button className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"> 
+              <button 
+                  onClick={handleDecreaseProduct}
+              className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"
+                 disabled={countProduct === 1}
+              > 
                     -
                   </button>
                   <p className="w-10 h-10 text-center p-2 text-[22px] font-[500]"> 
-                    1
+                     {countProduct}
                   </p>
-                    <button className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"> 
+                  
+                    <button 
+                     onClick={handleIncreaseProduct}
+                    className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"> 
                     +
                   </button>
               </div>

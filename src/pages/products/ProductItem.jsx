@@ -12,12 +12,12 @@ const ProductItem = ({product ,onOpenModal}) => {
  
 
     return (
-      <div  className="shadow-md rounded-md border ">
+      <div  className="shadow-md rounded-md border mt-8 h-[450px] mb-6">
   
-      <div className="imgWrapper  w-[100%] h-[280px] overflow-hidden relative">
+      <div className="imgWrapper   w-[100%] h-[280px] overflow-hidden relative">
        <Link to="/">
-       <div className="h-[280px]">
-       <img className=" w-full h-[280px] transition-all duration-500 hover:scale-[1.1] hover:opacity-100"  
+       <div className="h-full">
+       <img className=" w-full h-full transition-all duration-500 hover:scale-[1.1] hover:opacity-100"  
           src={product.thumbnail} alt="iamges" />
 
        </div>
@@ -50,16 +50,13 @@ const ProductItem = ({product ,onOpenModal}) => {
           </div>
 
       </div>
-      <div className="px-3 my-3">
-       <h3 className="hover:text-red-600 transition-all text-[#707171] text-[18px] mt-2">
-         <Link to="/"> Initech space</Link>
-         </h3>
+      <div className="px-3 my-10">
          <p className="hover:text-red-600 font-[500] transition-all text-[19px] leading-7 my-2"> 
-           <Link  to="/">Apple Smart Watch   Midnight Aluminum
+           <Link  to="/">{product.title}
            </Link>
            </p>
-       <Rating name="size-small" defaultValue={4} size="small" readOnly />
-           <p className="text-[18px] mt-1">$135</p>
+       <Rating name="size-small" defaultValue={product.rating} size="small" readOnly />
+           <p className="text-[18px] mt-1">Price : ${product.price}</p>
       </div>
  
      

@@ -39,9 +39,9 @@
 
 
 .swiper-button-disabled {
-  opacity: 0.5; /* Optional: indicate a disabled state visually */
-  pointer-events: auto; /* Allow clicks on "disabled" buttons */
-  cursor: pointer; /* Show a clickable cursor */
+  opacity: 0.5; 
+  pointer-events: auto; 
+  cursor: pointer; 
 }
 
 button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.css-121v88n-MuiButtonBase-root-MuiTab-root{
