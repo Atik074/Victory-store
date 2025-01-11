@@ -9,6 +9,8 @@ import "./Style.css"
 
 const ProductItem = ({product ,onOpenModal}) => {
     
+    console.log(product)
+    
  
 
     return (

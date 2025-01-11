@@ -10,7 +10,7 @@
   z-index: 10;
 }
 
- #fashionMenu:hover + #dropDownMenu, #dropDownMenu:hover{
+ #fashionMenu:hover + #dropDownMenu{
     visibility: inherit;
     opacity:1;
     transform: translateY(0px);

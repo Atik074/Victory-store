@@ -5,6 +5,7 @@ import Xmark from "../../components/svg/Xmark";
 import MinusSvg from "../../components/svg/MinusSvg";
 import CartSvg from "../../components/svg/CartSvg";
 
+
 const ProductCard = ({ product, onCloseModal }) => {
   const {
     title,
@@ -129,6 +130,9 @@ const ProductCard = ({ product, onCloseModal }) => {
 
       </div>
        
+
+
+
     </div>
   );
 };

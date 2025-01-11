@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Banner from "../banner/Banner";
 import Header from "../Header/Header";
 import SubHeader from "../Header/SubHeader";
@@ -13,6 +14,10 @@ const Home = () => {
             </div>
             <Banner/>
             <Products/>
+
+            <Link to ="/product-list">
+                  <button>go product list</button>
+            </Link>
           
             
         </div>

@@ -18,7 +18,7 @@ const SubHeader = () => {
 
   return (
     <>
-      <div className="container relative flex justify-between  text-xl bg-white  py-4 px-2">
+      <div className="container relative flex justify-between  text-xl bg-white  py-6 px-2">
         <div className="flex space-x-8">
           <button onClick={handleCategoryPanel} className="flex items-center">
             <BarSvg />
