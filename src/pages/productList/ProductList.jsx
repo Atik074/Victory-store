@@ -6,16 +6,33 @@ import SquareSvg from "../../components/svg/SquareSvg";
 import useProducts from "../../hooks/useProducts";
 import MainContentArea from "./MainContentArea";
 import { useState } from "react";
+import ProductModal from "../products/ProductModal";
+
 
 
 const ProductList = () => {
   const {products} = useProducts()
   const [inView, setInView] = useState(false); 
 
+  const [showModal, setShowModal] = useState(false);
+  const [product, setProduct] = useState(null);
+
+//  for modal
+ const handleCloseModal = () => setShowModal(false);
+ 
+ const handleOpenModal=(product)=>{
+  setProduct(product)
+  setShowModal(true)
+     
+ }
+
+
+
+ 
  
  
   return (
-    <section>
+    <section className="relative">
       {/* kaj baki ase  */}
 
       <div className="grid grid-cols-[250px,1fr] mt-12 container h-screen gap-20">
@@ -49,6 +66,9 @@ const ProductList = () => {
             </div>
           </div>
 
+
+
+
           
      
 
@@ -56,19 +76,27 @@ const ProductList = () => {
          className={`mt-6  ${inView ? "grid grid-cols-4 gap-[19px]" :  ""}`}
           >
 
-{products.slice(0, 10).map(product=>
+{products.slice(10, 20).map(product=>
 <MainContentArea
            key={product.id}
            product={product}
            inView={inView}
+           onOpenModal={handleOpenModal}
            />
            
            )}
 
       </div>
 
-         
-   
+          <div className="absolute top-[10px] p-4 left-[220px] w-[80%] z-50">
+        {
+         showModal && <ProductModal 
+         product={product}
+          onCloseModal={handleCloseModal}
+          />
+       }
+        </div>
+     
         
 
         

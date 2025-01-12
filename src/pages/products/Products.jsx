@@ -18,7 +18,7 @@ const Products = () => {
   const { products, isLoading, isError } = useProducts()
   const [product, setProduct] = useState(null);
 
-  console.log(products)
+
 
   //handle Modal Products
   const handleOpenModal = (product) => {

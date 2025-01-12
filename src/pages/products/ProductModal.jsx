@@ -31,12 +31,12 @@ const ProductModal = ({ product, onCloseModal }) => {
   };
 
   return (
-    <div className="w-3/4 h-[500px] transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
+    <div className="fixed  w-[80%] h-[500px]  transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-[24px] font-semibold">{title}t</h2>
           <p className="text-[18px]">
-            Brand: <span className="text-[19px]  font-medium ">{brand}</span>{" "}
+            Brand: <span className="text-[19px]  font-medium ">{brand } </span>{" "}
           </p>
         </div>
         <button className=" " onClick={onCloseModal}>
@@ -46,7 +46,7 @@ const ProductModal = ({ product, onCloseModal }) => {
       <hr className="w-full border-[1px] " />
 
       <div className="mt-8 flex gap-12">
-        <div className="imgWrapper  w-[100%] h-[300px] overflow-hidden relative">
+        <div className="imgWrapper  w-[60%] h-[300px] overflow-hidden relative">
           <div className="h-full border-[2px] rounded-md ">
             <img
               className=" w-full h-full  transition-all duration-500 hover:scale-[1.3] hover:opacity-100"
@@ -95,7 +95,7 @@ const ProductModal = ({ product, onCloseModal }) => {
               >
                 -
               </button>
-              <p className="w-10 h-10 text-center p-2 text-[22px] font-[500]">
+              <p className=" w-10 h-10 text-center p-2 text-[22px] font-[500]">
                 {countProduct}
               </p>
 
