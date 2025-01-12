@@ -7,10 +7,11 @@ import "./Style.css"
 
 
 
+
 const ProductItem = ({product ,onOpenModal}) => {
-    
+
+    if (!product) return <p className="text-xl text-red-700 mt-6">Product data not available</p>
     console.log(product)
-    
  
 
     return (

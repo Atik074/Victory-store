@@ -4,7 +4,10 @@ import Header from "../Header/Header";
 import SubHeader from "../Header/SubHeader";
 import Products from "../products/Products";
 
+
 const Home = () => {
+    
+
     return (
         <div>
             <div className="shadow-md">
@@ -16,7 +19,7 @@ const Home = () => {
             <Products/>
 
             <Link to ="/product-list">
-                  <button>go product list</button>
+                  <button className="px-6 py-2 text-xl m-8 rounded text-white bg-red-700">go product list</button>
             </Link>
           
             

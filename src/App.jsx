@@ -8,13 +8,15 @@ import ProductList from "./pages/productList/ProductList"
 function App() {
 
   return (
-    <div>
+   
+    <>
    <Routes>
-        <Route element={<Home/>} path="/"></Route>
-        <Route element={<ProductList/>} path="/product-list"></Route>
-       
+        <Route element={<Home/>} path="/" exact />
+        <Route element={<ProductList/>} path="/product-list"/> 
+      
      </Routes>
-    </div>
+    </>
+  
   
    
   )

@@ -13,8 +13,10 @@ import "swiper/css/navigation";
 const Products = () => {
   const [value, setValue] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const { products } = useProducts();
+  const { products, isLoading ,isError} = useProducts();
   const [product , setProduct] = useState(null)
+
+  
 
 
   console.log(product)
@@ -33,6 +35,11 @@ const Products = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+    
+  //for data hanlde
+  if(isLoading.state) return <p>Data is loading....</p>
+  if(isError) return <p>Error is : {isError}</p>
+
 
   return (
     <div className="container mt-28 relative">
@@ -77,18 +84,23 @@ const Products = () => {
         rewind={true}
         className="swiper-contents"
       >
-        {products.slice(0, 10).map((product) => (
+     
+       {products?.slice(0, 10)?.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductItem
-            key={product.id}
+           
               product={product}
               onOpenModal={handleOpenModal}
             
             />
           </SwiperSlide>
         ))}
+       
       </Swiper>
 
+
+
+     
             
        {
         showModal && 

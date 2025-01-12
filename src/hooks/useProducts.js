@@ -4,7 +4,7 @@ const useProducts =()=>{
     const [products , setProducts] = useState([])  
     const [isLoading , setIsLoading] = useState({
         state:false,
-        message:" "
+        message:""
     })
     const [isError , setIsError] = useState(null)
 
@@ -17,6 +17,7 @@ const useProducts =()=>{
                  state:true,
                 message:"product data is fetchig..."
             })
+            setIsError(null)
 
              const productsResponse =await  fetch(`https://dummyjson.com/products`)
              const productsData =await productsResponse.json()
