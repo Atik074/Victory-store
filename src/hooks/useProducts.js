@@ -7,6 +7,7 @@ const useProducts =()=>{
         message:""
     })
     const [isError , setIsError] = useState(null)
+   
 
 
     const fetchProducts =async()=>{
@@ -20,8 +21,10 @@ const useProducts =()=>{
             setIsError(null)
 
              const productsResponse =await  fetch(`https://dummyjson.com/products`)
+
              const productsData =await productsResponse.json()
              setProducts(productsData.products)
+           
             
 
         }catch(error){
@@ -44,7 +47,8 @@ const useProducts =()=>{
      products,
      setProducts,
      isLoading ,
-     isError
+     isError ,
+   
    } 
 
 

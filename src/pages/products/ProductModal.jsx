@@ -1,12 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import Xmark from "../../components/svg/Xmark";
-import MinusSvg from "../../components/svg/MinusSvg";
 import CartSvg from "../../components/svg/CartSvg";
+import Xmark from "../../components/svg/Xmark";
 
-
-const ProductCard = ({ product, onCloseModal }) => {
+const ProductModal = ({ product, onCloseModal }) => {
   const {
     title,
     rating,
@@ -17,17 +15,13 @@ const ProductCard = ({ product, onCloseModal }) => {
     price,
     availabilityStatus,
   } = product;
- 
+
   const [selectedSize, setSelectedSize] = useState(null);
-  const [countProduct , setCountProduct] = useState(1)
+  const [countProduct, setCountProduct] = useState(1);
 
-
-
-  
   // handle  increase or decrease  product in cart
-  const handleIncreaseProduct =()=>setCountProduct(countProduct + 1)
-  const handleDecreaseProduct =()=>setCountProduct(countProduct - 1)
- 
+  const handleIncreaseProduct = () => setCountProduct(countProduct + 1);
+  const handleDecreaseProduct = () => setCountProduct(countProduct - 1);
 
   // for product sizes
   const sizes = ["S", "M", "L"];
@@ -35,8 +29,6 @@ const ProductCard = ({ product, onCloseModal }) => {
   const handleSizeClick = (size) => {
     setSelectedSize(size);
   };
-
-
 
   return (
     <div className="w-3/4 h-[500px] transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
@@ -68,7 +60,6 @@ const ProductCard = ({ product, onCloseModal }) => {
               {discountPercentage}%
             </span>
           </div>
-         
         </div>
 
         <div className="textSide">
@@ -93,48 +84,37 @@ const ProductCard = ({ product, onCloseModal }) => {
                 {size}
               </div>
             ))}
-
           </div>
 
+          <div className="flex gap-x-10  my-6">
+            <div className="flex gap-x-5    items-center   justify-between">
+              <button
+                onClick={handleDecreaseProduct}
+                className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"
+                disabled={countProduct === 1}
+              >
+                -
+              </button>
+              <p className="w-10 h-10 text-center p-2 text-[22px] font-[500]">
+                {countProduct}
+              </p>
 
-            <div className="flex gap-x-10  my-6">
-              <div className="flex gap-x-5    items-center   justify-between">
-              <button 
-                  onClick={handleDecreaseProduct}
-              className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"
-                 disabled={countProduct === 1}
-              > 
-                    -
-                  </button>
-                  <p className="w-10 h-10 text-center p-2 text-[22px] font-[500]"> 
-                     {countProduct}
-                  </p>
-                  
-                    <button 
-                     onClick={handleIncreaseProduct}
-                    className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"> 
-                    +
-                  </button>
-              </div>
-             <button className="flex  items-center rounded-e-3xl rounded-s-3xl   hover:bg-[#0000001a] text-center text-[#fff] text-[20px]  hover:bg-[#53348c] bg-[#dc3545]  pr-5 pl-2 py-[7px]">
-              <CartSvg/>
-              <span className="-ml-2">Add To Cart</span>
-            
+              <button
+                onClick={handleIncreaseProduct}
+                className="w-11 h-11 border border-[#0000001a]  rounded-[50%]  bg-[#edeef5] hover:bg-[#0000001a] text-[30px] font-[500]"
+              >
+                +
               </button>
             </div>
-          
-
-
+            <button className="flex  items-center rounded-e-3xl rounded-s-3xl   hover:bg-[#0000001a] text-center text-[#fff] text-[20px]  hover:bg-[#53348c] bg-[#dc3545]  pr-5 pl-2 py-[7px]">
+              <CartSvg />
+              <span className="-ml-2">Add To Cart</span>
+            </button>
+          </div>
         </div>
-
-
       </div>
-       
-
-
-
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductModal;

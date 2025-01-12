@@ -1,45 +1,52 @@
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
 import { useState } from "react";
-import ProductCard from "./ProductCard";
-import ProductItem from "./ProductItem";
-import useProducts from "../../hooks/useProducts";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import ProductItem from "./ProductItem";
+import ProductModal from "./ProductModal";
+import useProducts from "../../hooks/useProducts";
+
 
 const Products = () => {
   const [value, setValue] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const { products, isLoading ,isError} = useProducts();
-  const [product , setProduct] = useState(null)
+  const { products, isLoading, isError } = useProducts()
+  const [product, setProduct] = useState(null);
 
-  
-
-
-  console.log(product)
+  console.log(products)
 
   //handle Modal Products
   const handleOpenModal = (product) => {
     setShowModal(true);
-    setProduct(product)
-    
+    setProduct(product);
   };
   //handle close Modal Products
-  const handleCloseModal = ()=>setShowModal(false)
-
-
+  const handleCloseModal = () => setShowModal(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-    
-  //for data hanlde
-  if(isLoading.state) return <p>Data is loading....</p>
-  if(isError) return <p>Error is : {isError}</p>
 
+
+ 
+
+
+
+
+  //for data hanlde
+  if (isLoading.state)
+    return (
+      <p className="text-3xl text-red-700">
+        Data is loading :{isLoading.message}
+      </p>
+    );
+  if (isError)
+    return <p className="text-3xl text-red-700">Error is : {isError}</p>;
 
   return (
     <div className="container mt-28 relative">
@@ -65,7 +72,12 @@ const Products = () => {
             aria-label="scrollable auto tabs example"
           >
             <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Fashions" />
-            <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Electronics" />
+          
+            <Tab 
+               
+            sx={{ fontSize: 15, fontWeight: 600 }} label="Electronics" />
+          
+
             <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Bags" />
             <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Footwear" />
             <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Groceries" />
@@ -84,36 +96,21 @@ const Products = () => {
         rewind={true}
         className="swiper-contents"
       >
-     
-       {products?.slice(0, 10)?.map((product) => (
+        {products?.slice(0, 10)?.map((product) => (
           <SwiperSlide key={product.id}>
-            <ProductItem
-           
-              product={product}
-              onOpenModal={handleOpenModal}
-            
-            />
+            <ProductItem product={product} onOpenModal={handleOpenModal} />
           </SwiperSlide>
         ))}
-       
       </Swiper>
 
-
-
-     
-            
-       {
-        showModal && 
-        <div className="w-full px-6  top-0
-        z-10 absolute">
-          <ProductCard 
-            product={product}
-            onCloseModal ={handleCloseModal}
-          />
+      {showModal && (
+        <div
+          className="w-full px-6  top-0
+        z-10 absolute"
+        >
+          <ProductModal product={product} onCloseModal={handleCloseModal} />
         </div>
-       }
-
-      
+      )}
     </div>
   );
 };
