@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ProductItem from "./ProductItem";
 import ProductModal from "./ProductModal";
 import useProducts from "../../hooks/useProducts";
+import { useNavigate } from "react-router";
 
 
 const Products = () => {
@@ -17,6 +18,7 @@ const Products = () => {
   const [showModal, setShowModal] = useState(false);
   const { products, isLoading, isError } = useProducts()
   const [product, setProduct] = useState(null);
+  const navigate = useNavigate()
 
 
 
@@ -33,7 +35,10 @@ const Products = () => {
   };
 
 
- 
+  const handoPera =()=>{
+    console.log("be worker")
+    navigate("/product-list")
+  }
 
 
 
@@ -74,7 +79,7 @@ const Products = () => {
             <Tab sx={{ fontSize: 15, fontWeight: 600 }} label="Fashions" />
           
             <Tab 
-               
+               onClick={handoPera}
             sx={{ fontSize: 15, fontWeight: 600 }} label="Electronics" />
           
 

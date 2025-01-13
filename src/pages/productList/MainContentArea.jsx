@@ -40,7 +40,7 @@ const MainContentArea = ({product ,inView ,  onOpenModal}) => {
             className={`heartSvg w-[40px] h-[40px]  rounded-[100%]    absolute  text-black 
                 bg-[#f1f2f6]
                  hover:bg-red-700 hover:text-white 
-                opacity-0 transition-all ${inView ? "top-[40px] left-[163px]" : "top-[30px] left-[227px] "}`}
+                opacity-0 transition-all ${inView ? "top-[40px] left-[163px]" : "top-[30px] left-[225px] "}`}
           >
             <HeartSvg />
           </button>
@@ -48,8 +48,8 @@ const MainContentArea = ({product ,inView ,  onOpenModal}) => {
           <button 
             // onClick={()=>setShowModal(true)}
             onClick={()=> onOpenModal(product)}
-          className={`zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute top-[80px] left-[235px]   text-black bg-[#f1f2f6]  hover:bg-red-700 hover:text-white opacity-0 transition-all 
-            ${inView ? "top-[90px] left-[163px]" : "top-[80px] left-[227px] "}
+          className={`zoomSvg w-[40px] h-[40px]  rounded-[100%]  absolute  text-black bg-[#f1f2f6]  hover:bg-red-700 hover:text-white opacity-0 transition-all 
+            ${inView ? "top-[90px] left-[163px]" : "top-[80px] left-[225px] "}
             `}>
             <ZoomSvg />
           </button>

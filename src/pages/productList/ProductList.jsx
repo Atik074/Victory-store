@@ -13,9 +13,10 @@ import ProductModal from "../products/ProductModal";
 const ProductList = () => {
   const {products} = useProducts()
   const [inView, setInView] = useState(false); 
-
   const [showModal, setShowModal] = useState(false);
   const [product, setProduct] = useState(null);
+
+  console.log("view" ,inView)
 
 //  for modal
  const handleCloseModal = () => setShowModal(false);
