@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -9,14 +9,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import ProductItem from "./ProductItem";
 import ProductModal from "./ProductModal";
-import useProducts from "../../hooks/useProducts";
 import { useNavigate } from "react-router";
+import { CircularProgress } from "@mui/material";
+import { ProductContext } from "../../context";
 
 
 const Products = () => {
   const [value, setValue] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const { products, isLoading, isError } = useProducts()
+  const {products, isLoading, isError}  = useContext(ProductContext)
   const [product, setProduct] = useState(null);
   const navigate = useNavigate()
 
@@ -35,9 +36,15 @@ const Products = () => {
   };
 
 
+  // todo
   const handoPera =()=>{
-    console.log("be worker")
+    
     navigate("/product-list")
+  }
+
+  //for product details 
+  const handleDetailsProduct =(product)=>{
+    console.log('res', product)
   }
 
 
@@ -47,9 +54,10 @@ const Products = () => {
   if (isLoading.state)
     return (
       <p className="text-3xl text-red-700">
-        Data is loading :{isLoading.message}
+         <CircularProgress />
       </p>
     );
+
   if (isError)
     return <p className="text-3xl text-red-700">Error is : {isError}</p>;
 
@@ -103,19 +111,26 @@ const Products = () => {
       >
         {products?.slice(0, 10)?.map((product) => (
           <SwiperSlide key={product.id}>
-            <ProductItem product={product} onOpenModal={handleOpenModal} />
+            <ProductItem 
+            product={product} 
+            onOpenModal={handleOpenModal}
+            onDetailsProduct={handleDetailsProduct}
+             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {showModal && (
         <div
-          className="w-full px-6  top-0
-        z-10 absolute"
+          className="w-full px-6  top-16
+        absolute  z-10 "
         >
-          <ProductModal product={product} onCloseModal={handleCloseModal} />
+          <ProductModal 
+          product={product} 
+          onCloseModal={handleCloseModal} />
         </div>
       )}
+      
     </div>
   );
 };

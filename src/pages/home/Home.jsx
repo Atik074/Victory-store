@@ -1,4 +1,5 @@
 
+import { ProductProvider } from "../../providers/ProductProvider";
 import Banner from "../banner/Banner";
 import Header from "../Header/Header";
 import SubHeader from "../Header/SubHeader";
@@ -9,7 +10,7 @@ const Home = () => {
     
 
     return (
-        <div>
+        <ProductProvider>
             <div className="shadow-md">
               <Header/>
                   <hr/>
@@ -17,11 +18,8 @@ const Home = () => {
             </div>
             <Banner/>
             <Products/>
-
-           
-          
             
-        </div>
+        </ProductProvider>
     );
 };
 

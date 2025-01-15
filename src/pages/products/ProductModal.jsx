@@ -31,12 +31,14 @@ const ProductModal = ({ product, onCloseModal }) => {
   };
 
   return (
-    <div className="fixed  w-[80%] h-[500px]  transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
+    <div className="w-[80%] h-[500px]  transition-all duration-300 mx-auto bg-[#ffffff] border rounded-md shadow-lg px-4 my-2">
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-[24px] font-semibold">{title}t</h2>
           <p className="text-[18px]">
-            Brand: <span className="text-[19px]  font-medium ">{brand } </span>{" "}
+            Brand: <span className="text-[19px]  font-medium ">
+            {brand || "Mixed"}
+              </span>{" "}
           </p>
         </div>
         <button className=" " onClick={onCloseModal}>

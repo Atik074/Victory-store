@@ -10,7 +10,7 @@ const MainContentArea = ({product ,inView ,  onOpenModal}) => {
   
 
   return (
-         <div className="">
+      
             <div
        
        className={`bg-[#f1f1f1]   hover:shadow-xl rounded-lg  transition-all ${inView ? "border-[#e6e1e1]  border-2" :"flex  items-center mb-6" } `}
@@ -72,7 +72,6 @@ const MainContentArea = ({product ,inView ,  onOpenModal}) => {
 
        
 
-         </div> 
       
   
     

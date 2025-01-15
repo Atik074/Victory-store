@@ -8,7 +8,7 @@ import "./Style.css"
 
 
 
-const ProductItem = ({product ,onOpenModal}) => {
+const ProductItem = ({product ,onOpenModal ,onDetailsProduct}) => {
 
     if (!product) return <p className="text-xl text-red-700 mt-6">Product data not available</p>
  
@@ -17,7 +17,9 @@ const ProductItem = ({product ,onOpenModal}) => {
       <div  className="shadow-md rounded-md border mt-8 h-[450px] mb-6">
   
       <div className="imgWrapper   w-[100%] h-[280px] overflow-hidden relative">
-       <Link to="/">
+       <Link 
+        onClick={(()=>onDetailsProduct(product))}
+       to="/product/:id">
        <div className="h-full">
        <img className=" w-full h-full transition-all duration-500 hover:scale-[1.1] hover:opacity-100"  
           src={product.thumbnail} alt="iamges" />

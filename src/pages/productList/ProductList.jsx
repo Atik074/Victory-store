@@ -16,6 +16,7 @@ const ProductList = () => {
   const [showModal, setShowModal] = useState(false);
   const [product, setProduct] = useState(null);
 
+
   console.log("view" ,inView)
 
 //  for modal
@@ -33,13 +34,13 @@ const ProductList = () => {
  
  
   return (
-    <section className="relative">
+    <section className="relative ">
       {/* kaj baki ase  */}
 
       <div className="grid grid-cols-[250px,1fr] mt-12 container h-screen gap-20">
         <Sidebar />
 
-        <div className="mainContent mt-8 ">
+        <div className="mainContent mt-8">
           <div className="bg-slate-100 flex items-center justify-between p-5 rounded">
 
             <div className="flex gap-x-6 ">
